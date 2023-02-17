@@ -1,0 +1,21 @@
+
+/* common styles */
+
+
+button{
+    background-color: #254cf3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+
+
+
+
+.container-header{
+    display: flex;
+    
+}
