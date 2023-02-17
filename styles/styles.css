@@ -35,8 +35,11 @@ button:hover {
 }
 
 .card {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    /* justify-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 1px solid rgb(243, 235, 235);
     border-radius: 5px;
     padding-left: 40px;
