@@ -1,17 +1,18 @@
-body{
+body {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
 }
+
 /* common styles */
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-button{
+button {
     background-color: #254cf3;
     color: white;
     border: none;
@@ -23,16 +24,17 @@ button{
     font-size: 20px;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
-.card-btn{
+.card-btn {
     margin-top: 30px;
     margin-bottom: 30px;
     width: 100%;
 }
-.card{
+
+.card {
     display: grid;
     justify-items: center;
     border: 1px solid rgb(243, 235, 235);
@@ -43,7 +45,7 @@ button:hover{
 }
 
 /* styles for input-field */
-.input-field{
+.input-field {
     margin-top: 10px;
     width: 30px;
     border: none;
@@ -52,9 +54,16 @@ button:hover{
 }
 
 /* styles for  card-image */
-.card-image{
+.card-image {
     margin-top: 30px;
     margin-bottom: 30px;
+    width: 230px;
+}
+
+#area-calculation-title {
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
 }
 
 
@@ -67,19 +76,38 @@ NORMAL STYLES
 
 
 /* Styles for the header sections */
-.container-header{
+.container-header {
     background-color: #cce5f3;
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* styles for the container-main of main section */
 
-.container-main{
+.container-main {
     display: flex;
+    gap: 10px;
 
 }
 
+.area-calculation {
+    border: 2px solid rgb(243, 235, 235);
+    border-radius: 5px;
+    height: 50vh;
+    width: 320px;
+    margin-top: 30px;
+}
 
+/* styles for grid-container  */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
