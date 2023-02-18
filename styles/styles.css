@@ -1,3 +1,10 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     max-width: 1300px;
     margin-left: auto;
@@ -5,12 +12,11 @@ body {
     margin-top: 10px;
 }
 
+
+
 /* common styles */
 
-* {
-    margin: 0;
-    padding: 0;
-}
+
 
 button {
     background-color: #254cf3;
@@ -28,15 +34,16 @@ button:hover {
     cursor: pointer;
 }
 
-.card-btn {
+.card-btn {          /* This styles form those buttons who're inside card*/ 
     margin-top: 30px;
     margin-bottom: 30px;
     width: 100%;
 }
 
+
+/* styles for card */
 .card {
     display: flex;
-    /* justify-items: center; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -63,12 +70,7 @@ button:hover {
     width: 230px;
 }
 
-#area-calculation-title {
-    text-align: center;
-    margin-top: 10px;
-    text-decoration: underline;
-    margin-bottom: 20px;
-}
+
 
 .convert-btn{
     background-color: #254cf3;
@@ -114,10 +116,12 @@ NORMAL STYLES
 
 .container-main {
     display: flex;
+    margin-bottom: 50px;
     gap: 10px;
 
 }
 
+/* styles for the area-calculation section which shows the result */
 .area-calculation {
     border: 2px solid rgb(243, 235, 235);
     border-radius: 5px;
@@ -126,11 +130,18 @@ NORMAL STYLES
     margin-top: 30px;
     padding: 5px;
 }
+#area-calculation-title {
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
 
 /* styles for grid-container  */
 
 .grid-container {
     display: grid;
+    /* align-items: end; */
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }

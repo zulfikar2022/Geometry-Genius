@@ -1,31 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog with question and answer</title>
+    <style>
+        body {
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+        p{
+            font-size: 25px;
+        }
+        li{
+            font-size: 20px;
+        }
+    </style>
 </head>
+
 <body>
-            <h1>1. What is DOM and what is the purpose of DOM?</h1>
-            <p>DOM is the abbreviation for Document Object Model.In this model the whole html page is considered as a document and each element is considered as a node. In brief, it is a programming interface for html document . 
-            The purpose of DOM is to manipulate html using programming language.HTML elements can be styled, newly added,deleted or any type of modification is possible with the help of DOM. </p>
+    <h1>1. What is DOM and what is the purpose of DOM?</h1>
+    <p>DOM is the abbreviation for Document Object Model.In this model the whole html page is considered as a document
+        and each element is considered as a node. In brief, it is a programming interface for html document .
+        The purpose of DOM is to manipulate html using programming language.HTML elements can be styled, newly
+        added,deleted or any type of modification is possible with the help of DOM. </p>
 
-            <h1>2.How will you select HTML elements using DOM? Name the DOM methods.</h1>
-            <p>There are several methods for selecting HTML element using DOM. Sometimes we use unique id or a general class name for select elements. And sometimes we use the tag name for cath all the html element with the same name. In javaScript we've the following methods for selection of HTML element- <br>
-            <ul>
-                <li>getElementById()</li>
-                <li>getElementsByClassName()</li>
-                <li>getElementsByTagName()</li>
-                <li>querySelector()</li>
-                <li>querySelectorAll()</li>
-            </ul> </p>
+    <h1>2.How will you select HTML elements using DOM? Name the DOM methods.</h1>
+    <p>There are several methods for selecting HTML element using DOM. Sometimes we use unique id or a general class
+        name for select elements. And sometimes we use the tag name for catch all the html element with the same name. In
+        javaScript we've the following methods to select HTML element- <br>
+    <ul>
+        <li>getElementById()</li>
+        <li>getElementsByClassName()</li>
+        <li>getElementsByTagName()</li>
+        <li>querySelector()</li>
+        <li>querySelectorAll()</li>
+    </ul>
+    </p>
 
-            <h1>3.What is event bubble?</h1>
-            <p>Event bubble is a concept related to the event propagation in the DOM tree. It specially occurs in nested HTML element where a parent-child relation can be placed. If we have three elements inside one another and we click or occur any event on the most inner child then all the event for all these three HTML elements will be triggered and perform their task in such manner that bubbles follow. And it is from the most inner child to the starting parent.  </p>
+    <h1>3.What is event bubble?</h1>
+    <p>Event bubble is a concept related to the event propagation in the DOM tree. It specially occurs in nested HTML
+        element where a parent-child relation can be placed. If we have three elements inside one another and we click
+        or occur any event on the most inner child then all the event for all these three HTML elements will be
+        triggered and perform their task in such manner that bubbles follow. And it is from the most inner child to the
+        starting parent. </p>
 
-            <h1>4.What is a callback function and why will you use it?</h1>
-            <p>If a function is sent as an argument of an another function then the sent function is called a callback function. We've seen the use of callback function while using addEventListener() function. In this case we send a function for performing some task if the event occurs inside addEventListener() function.</p>
-        </body>
+    <h1>4.What is a callback function and why will you use it?</h1>
+    <p>If a function is sent as an argument of an another function then the sent function is called a callback function.
+        We've seen the use of callback function while using addEventListener() function. In this case we send a function
+        for performing some task if the event occurs inside addEventListener() function.</p>
+</body>
+
 </html>
