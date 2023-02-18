@@ -28,9 +28,9 @@ function precisionMaker(data) {
     }
 }
 
-function indexFinder(theArray,theElement){
-    for(let i =0 ; i< theArray.length ; i++){
-        if(theArray[i]==theElement){
+function indexFinder(theArray, theElement) {
+    for (let i = 0; i < theArray.length; i++) {
+        if (theArray[i] == theElement) {
             console.log('entered if block');
             return i;
         }
@@ -41,17 +41,29 @@ function indexFinder(theArray,theElement){
 
 
 let globalSerial = 1;
-function setResultToAreaCalculation(elementId,result){
+function setResultToAreaCalculation(elementId, result) {
 
-        const newDiv = document.createElement('div');
-        const newSpan = document.createElement('span')
-        const newBtn = document.createElement('button');
+    const areaCalculation = document.querySelector('.area-calculation');
 
-      
+    const newDiv = document.createElement('div');
+    const newSpan = document.createElement('span');
+    const anotherSpan = document.createElement('span');
+    const newBtn = document.createElement('button');
+
     
- 
+    newSpan.innerText = globalSerial+'. ' + elementId +'';
+    anotherSpan.innerText = result+'cm2';
+    anotherSpan.classList.add('extra-class')
+    newSpan.appendChild(anotherSpan);
 
-        globalSerial++;
+    newDiv.appendChild(newSpan)  ;
+
+    newBtn.innerText = 'convert';
+    newBtn.classList.add('convert-btn');
+    newDiv.appendChild(newBtn) ;
+
+    areaCalculation.appendChild(newDiv);
+    globalSerial++;
 }
 
 
@@ -60,11 +72,11 @@ document.querySelector('.grid-container').addEventListener('click', function (ev
 
 
     if (event.target.innerText === 'Calculate') {
-        const inputOneElements = document.getElementsByClassName('input-one');  
-        const inputTwoElements = document.getElementsByClassName('input-two');  
+        const inputOneElements = document.getElementsByClassName('input-one');
+        const inputTwoElements = document.getElementsByClassName('input-two');
 
-        const figureItemId = event.target.parentNode.id;   
- 
+        const figureItemId = event.target.parentNode.id;
+
 
         if (figureItemId === 'triangle') {
             const valueOne = inputOneElements[0].value;
@@ -75,7 +87,8 @@ document.querySelector('.grid-container').addEventListener('click', function (ev
             else {
                 const multiResult = multiOfTwo(valueOne, valueTwo);
                 const area = 0.5 * multiResult;
-                console.log(precisionMaker(area));
+                const finalResult = (precisionMaker(area));
+                setResultToAreaCalculation('triangle', finalResult)
             }
         }
 
@@ -88,7 +101,8 @@ document.querySelector('.grid-container').addEventListener('click', function (ev
             else {
                 const multiResult = multiOfTwo(valueOne, valueTwo);
                 const area = multiResult;
-                console.log(precisionMaker(area));
+                const finalResult = (precisionMaker(area));
+                setResultToAreaCalculation('rectangle', finalResult)
             }
         }
 
@@ -101,7 +115,8 @@ document.querySelector('.grid-container').addEventListener('click', function (ev
             else {
                 const multiResult = multiOfTwo(valueOne, valueTwo);
                 const area = multiResult;
-                console.log(precisionMaker(area));
+                const finalResult = (precisionMaker(area));
+                setResultToAreaCalculation('parallelogram', finalResult)
             }
         }
 
@@ -114,7 +129,8 @@ document.querySelector('.grid-container').addEventListener('click', function (ev
             else {
                 const multiResult = multiOfTwo(valueOne, valueTwo);
                 const area = 0.5 * multiResult;
-                console.log(precisionMaker(area));
+                const finalResult = (precisionMaker(area));
+                setResultToAreaCalculation('rhombus', finalResult)
             }
         }
 
@@ -127,7 +143,8 @@ document.querySelector('.grid-container').addEventListener('click', function (ev
             else {
                 const multiResult = multiOfTwo(valueOne, valueTwo);
                 const area = 0.5 * multiResult;
-                console.log(precisionMaker(area));
+                const finalResult = (precisionMaker(area));
+                setResultToAreaCalculation('pentagon', finalResult)
             }
         }
 
@@ -140,16 +157,17 @@ document.querySelector('.grid-container').addEventListener('click', function (ev
             else {
                 const multiResult = multiOfTwo(valueOne, valueTwo);
                 const area = (Math.PI) * multiResult;
-                console.log(precisionMaker(area));
+                const finalResult = (precisionMaker(area));
+                setResultToAreaCalculation('ellipse', finalResult)
             }
         }
-           
+
     }
- 
+
 })
 
 
 
-document.getElementById('blog-btn').addEventListener('click',function(event){
+document.getElementById('blog-btn').addEventListener('click', function (event) {
     window.location.href = 'blog.html';
 })

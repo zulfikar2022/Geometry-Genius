@@ -67,6 +67,25 @@ button:hover {
     text-align: center;
     margin-top: 10px;
     text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.convert-btn{
+    background-color: #254cf3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 1px;
+    margin-bottom: 10px;
+}
+.extra-class{
+    margin-left: 40px;
 }
 
 
@@ -102,7 +121,7 @@ NORMAL STYLES
 .area-calculation {
     border: 2px solid rgb(243, 235, 235);
     border-radius: 5px;
-    height: 60vh;
+    height: auto;
     width: 320px;
     margin-top: 30px;
     padding: 5px;
@@ -114,4 +133,24 @@ NORMAL STYLES
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+}
+
+
+
+/* 
+    RESPONSIVE FOR MOBILE
+*/
+
+@media  screen and (max-width: 600px) {
+    .container-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
